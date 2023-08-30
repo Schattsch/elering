@@ -12,7 +12,7 @@ function App() {
 
     useEffect(() => {
         if (start !== "" && end !== "") {
-            fetch("http://localhost:3000/nord-pool-price/" + chosenCountry + "/" + start + "/" + end)
+            fetch("http://localhost:3000/nord-pool-price?country=" + chosenCountry + "&start=" + start + "&end=" + end)
                 .then(res => res.json())
                 .then(json => {
                     setPrices(json);
